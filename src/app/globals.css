@@ -18,7 +18,7 @@ html, body {
 
 @media (prefers-color-scheme: dark) {
   html, body {
-    background-color: #121212; /* 완전 다크 배경 */
+    background-color: #363636; /* 완전 다크 배경 */
     color: #e0e0e0;
   }
 }
@@ -26,4 +26,20 @@ html, body {
 /* iframe 내부 강제 하얀 배경 */
 iframe {
   background-color: white !important;
+}
+
+.bg-gray-100{
+  background-color: #222;
+}
+
+.mb-2{
+  color: #d1d1d1;
+}
+
+.hd{
+  color: #222;
+}
+
+.border2{
+  background-color: rgb(178, 178, 178);
 }
