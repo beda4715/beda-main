@@ -3,10 +3,47 @@ export const metadata = {
   description: 'Express와 Mysql을 활용한 게시판',
 };
 
-
-`code`
-
-<StackBlitzEmbed
-  repo='GyeongtaeGim/react-scroll-interaction-example'
-  height='700px'
-/>
+export default function Page() {
+  return (
+    <div className="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl shadow-md p-6 my-6">
+      <h2 className="text-2xl font-bold mb-2 text-blue-600">📌 프로젝트 개요</h2>
+      <p className="mb-4 text-zinc-700 dark:text-zinc-300">
+        Express-Board는 <strong className="text-black dark:text-white">Node.js의 Express 프레임워크</strong>를 기반으로 만든 게시판 프로젝트입니다.
+      </p>
+      <h3 className="text-xl font-semibold mb-2">🔧 사용 기술</h3>
+      <ul className="list-disc list-inside text-zinc-700 dark:text-zinc-300 mb-4">
+        <li>Express</li>
+        <li>MySQL</li>
+        <li>AWS EC2</li>
+        <li>Docker</li>
+      </ul>
+      <h3 className="text-xl font-semibold mb-2">🌐 배포된 웹사이트</h3>
+      <a
+        href="http://43.200.176.82:3000/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-500 hover:underline"
+      >
+        http://43.200.176.82:3000/
+      </a>
+      <div
+        className="mt-4 border border-zinc-300 dark:border-zinc-700 rounded-md"
+        style={{
+          width: '100%',
+          maxWidth: '1920px',
+          aspectRatio: '16 / 9',
+          margin: 'auto',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+          overflow: 'hidden',
+        }}
+      >
+        <iframe
+          src="http://43.200.176.82:3000/"
+          title="Express Board"
+          style={{ width: '100%', height: '100%', border: 'none' }}
+          scrolling="yes"
+        />
+      </div>
+    </div>
+  );
+}

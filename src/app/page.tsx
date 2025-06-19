@@ -20,21 +20,11 @@ export default async function Home() {
       <div className='max-w-6xl w-full grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 grid'>
         {posts.map((post) => (
           <div key={post.slug} className='border rounded-lg shadow-md border-black/10'>
-            <Image
-              src={
-                post.metadata.image ||
-                `/posts/og-image?title=${encodeURIComponent(post.metadata.title)}`
-              }
-              alt={post.metadata.title}
-              className='w-full object-cover rounded-t-lg mb-4 aspect-[1200/630]'
-              width={1200}
-              height={630}
-            />
             <div className='p-4'>
               <h2 className='text-2xl font-bold mb-2'>
                 <Link href={`/posts/${post.slug}`}>{post.metadata.title}</Link>
               </h2>
-              <p className='text-gray-600 mb-4'>{post.metadata.description}</p>
+              <div className='text-gray-600 mb-4'>{post.metadata.description}</div>
               <Link
                 href={`/posts/${post.slug}`}
                 className='text-blue-500 hover:underline'>

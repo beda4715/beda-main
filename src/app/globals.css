@@ -6,3 +6,24 @@
   font-weight: 400;
   font-style: normal;
 }
+
+/* global.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* 기본 라이트 배경 */
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #121212; /* 완전 다크 배경 */
+    color: #e0e0e0;
+  }
+}
+
+/* iframe 내부 강제 하얀 배경 */
+iframe {
+  background-color: white !important;
+}
